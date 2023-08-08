@@ -1,0 +1,528 @@
+@import 'reset.css';
+@font-face {
+  /* font-family: "KopubWorld Dotum_pro Light";
+  src: url("../fonts/KopubWorld Dotum_pro Light.otf"); */
+
+  font-family: "GmarketSansLight";
+  src: url("../fonts/GmarketSansLight.otf");
+}
+
+
+div#root {
+  position: relative;
+}
+
+body{
+  font-family: "GmarketSansLight";
+}
+
+.all-contents {
+  position: absolute;
+  /* background-color: white; */
+  display: flex;
+  /* max-height: 400px; */
+  gap: 10px;
+  font-family: "GmarketSansLight";
+}
+
+/* .main::after{ clear: both; display: block; content: '';} */
+
+.main .side-bar{
+  width: 200px;
+  /* flex-shrink: 0; */
+  /* z-index: 3; */
+}
+
+.main .map-area {
+  position: relative;
+  left: 500px;
+  /* flex-grow: 1; */
+  /* z-index: 1; */
+}
+
+/* 헤더스타일 */
+
+.header-container {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  /* border: 2px solid black; */
+  width: 100vw;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.header-wrap {
+  height: 64px;
+  max-width: 2000px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-left-wrap{
+  display: flex;
+}
+
+.header-left-wrap ul {
+  display: flex;
+  margin-left: 16px;
+  align-items: center;
+}
+
+.header-left-wrap li {
+  margin-right: 14px;
+  padding: 8px;
+  color: white;
+  
+}
+
+.header-nav-item {
+  color: #3170B9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 물놀이 스프라이트 이미지 스타일 */
+.map-wrap{
+  /* position: absolute; */
+  position:relative;
+}
+
+#mapwrap{position:relative;overflow:hidden;}
+.category, .category *{
+  margin:0;
+  padding:0;
+  color:#000;
+}
+/* .app-div {
+  position: relative;
+} */
+
+.category {
+  display:flex;
+  border: 2px solid black;
+   position:absolute;
+   overflow:hidden;
+   margin-top: 10px;
+   margin-left: 15px;
+   /* top:10px;
+   left:10px; */
+   width:150px;
+   height:50px;
+   z-index:10;
+   border-radius: 5px;
+   font-family:'Malgun Gothic','맑은 고딕',sans-serif;
+   font-size:8px;
+   text-align:center;
+   background-color:#000000;
+  }
+
+.category .menu_selected {
+  
+    color:black;background:#ffffff;border-left:1px solid #915B2F;border-right:1px solid #915B2F;margin:0 -1px;
+  }
+
+.category li{color:rgb(255, 255, 255);list-style:none;float:left;width:50px;height:45px;padding-top:5px;cursor:pointer;} 
+.category .ico_comm {display:block;margin:0 auto 2px;width:22px;height:26px;background:url('../image/sprite.png') no-repeat;} 
+.category .ico_waterpark {background-position:-10px 0;}  
+.category .ico_store {background-position:-5px -30px;}   
+.category .ico_carpark {background-position:-5px -60px;} 
+
+/*메뉴얼 스타일 */
+.manual {
+  padding: 10px;
+  display:flex; 
+  position:absolute;
+  /* float: right; */
+  /* top:80px;
+  left:950px; */
+  margin-top: 10px;
+  margin-left: 1100px;
+  width:330px;
+  height:25px;
+  z-index:10;
+  border:2px dashed #3170B9;
+  border-radius: 10px;
+  font-family:'Malgun Gothic','맑은 고딕',sans-serif;
+  font-size:13px;
+  font-weight: Light;
+  text-align:center;
+  background-color:rgb(255, 254, 254);
+  align-items: center;
+}
+
+/* 사이드바 스타일 */
+/* *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+} */
+
+.container{
+  display: flex;
+}
+
+main{
+  width: 80%;
+  padding: 10px;
+}
+
+.sidebar {
+  /* border: 2px solid #3170B9; */
+  border-radius: 10px;
+  position: relative;
+  background: white;
+  color: black;
+  height: 100vh;
+  width: 500px;
+  transition: all 0.3s;
+}
+
+.top_section{
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.link{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 10px;
+  transition: all 0.5s;
+}
+
+.sidebar-input {
+  display: flex;
+  width: 100%;
+}
+
+.link:hover{
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active{
+  background: lightskyblue;;
+  color: #000;
+}
+
+.icon, .link_text{
+  font-size: 20px;
+  color: #3170B9;
+}
+
+
+/* 커스텀 오버레이 스타일 */
+.wrap {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  /*커스텀오버레이크기설정 wrap. info와 같은 비율로 변경할 것*/
+  width: 298px;
+  height: 152px;
+  margin-left: -144px;
+  text-align: left;
+  font-size: 12px;
+  /* font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5; */
+  font-family: "GmarketSansLight", sans-serif;line-height: 1.5;
+}
+
+.wrap * {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap .info {
+  width: 296px;
+  height: 140px;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  border-right: 1px solid #ccc;
+  background: #fff;
+}
+
+.wrap .info:nth-child(1) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+  /* overflow: auto; */
+}
+
+.info .title {
+  padding: 5px 0 0 10px;
+  height: 20px;
+  line-height: 20px;
+  background: #3170B9;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.info .close {
+  display: "flex"; 
+  justify-content: "center"; 
+  align-items: "center";
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  color: #ffffff;
+  width: 16px;
+  height: 16px;
+  /* background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png'); */
+}
+
+.info .close:hover {
+  cursor: pointer;
+}
+
+.info .body {
+  position: relative;
+  overflow: hidden;
+}
+
+.info .desc {
+  position: relative;
+  margin: 13px 0 0 90px;
+
+  /* 간단설명내용 크기 설정 */
+  height: 110px;  
+}
+
+/* .desc .ellipsis {
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */
+
+.desc .values {
+  overflow: auto;
+}
+
+.desc .jibun {
+  font-size: 12px;
+  color: #3170B9;
+  margin-top: -2px;
+  overflow: hidden;
+}
+
+.info .img {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 73px;
+  height: 90px;
+  border: 1px solid #ddd;
+  color: #888;
+  overflow: hidden;
+}
+
+.info:after {
+  content: '';
+  position: absolute;
+  margin-left: -12px;
+  left: 50%;bottom: 0;
+  width: 22px;
+  height: 12px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
+.info .link {
+  color: #5085BB;}
+
+
+/* 편의시설 커스텀오버레이 */
+.t_wrap {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 288px;
+  height: 132px;
+  margin-left: -144px;
+  text-align: left;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+  line-height: 1.5;
+}
+
+.t_wrap * {
+  padding: 0;
+  margin: 0;
+}
+
+.t_wrap .t_info {
+  width: 286px;
+  height: 120px;
+  border-radius: 5px;
+  border-bottom: 2px solid #ccc;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+  background: #fff;
+}
+
+.t_wrap .t_info:nth-child(1) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+
+.t_info .t_title {
+  padding: 5px 0 0 10px;
+  height: 30px;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.t_info .t_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #888;
+  width: 17px;
+  height: 17px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+
+.t_info .t_close:hover {
+  cursor: pointer;
+}
+
+.t_info .t_body {
+  position: relative;
+  overflow: hidden;
+}
+
+.t_info .t_desc {
+  position: relative;
+  margin: 13px 0 0 90px;
+  height: 75px;
+}
+
+.t_desc .t_ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t_desc .t_jibun {
+  font-size: 11px;
+  color: #888;
+  margin-top: -2px;
+}
+
+.t_info .t_img {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 73px;
+  height: 71px;
+  border: 1px solid #ddd;
+  color: #888;
+  overflow: hidden;
+}
+
+.t_info:after {
+  content: '';
+  position: absolute;
+  margin-left: -12px;
+  left: 50%;
+  bottom: 0;
+  width: 22px;
+  height: 12px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
+.t_info .t_link {
+  color: #5085BB;
+}
+
+.detail-basic {
+  font-family: "GmarketSansLight", sans-serif;
+  line-height: 1.5;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#detail-wrap {
+  overflow: scroll;
+  margin: 0 auto;
+  width: 1000px;
+  height: 650px;
+  /* border: 2px solid rgb(199, 192, 192); */
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+}
+
+.box {
+  width: 98%;
+  height: 300px;
+  /* border: 2px solid red; */
+  /* padding: 10px; */
+  margin: 10px;
+}
+
+.box .box-info {
+  display: inline-block;
+  width: 48%;
+  height: 95%;
+  /* border: 2px solid blue; */
+  /* margin: 10px; */
+  border: 2px solid rgb(199, 192, 192);
+  border-radius: 10px;
+}
+
+.box .box-info div {
+  width: 90%;
+  height: 40%;
+  /* border: 2px solid red; */
+  /* border: 2px solid rgb(199, 192, 192);
+  border-radius: 10px; */
+  position: absolute;
+}
+
+.box .box-graph {
+  width: 32%;
+  height: 320px;
+  display: inline-block;
+  border: 2px solid rgb(199, 192, 192);
+  border-radius: 10px;
+
+}
+
+.highlight {
+  font-weight: bold;
+  /* color: #3170B9; */
+  color: red;
+}
+
+#progress {
+  appearance: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#progress::-webkit-progress-bar {
+  background:#f0f0f0;
+  border-radius:10px;
+  box-shadow: inset 3px 3px 10px #ccc;
+}
+
+#progress::-webkit-progress-value {
+  border-radius:10px;
+  background: #306CB5;
+  background: -webkit-linear-gradient(to right, #4498FF, #306CB5);
+  background: linear-gradient(to right, #4498FF, #306CB5);
+}
