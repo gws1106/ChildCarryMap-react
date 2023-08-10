@@ -18,7 +18,6 @@ import {
   FaParking,
   FaRestroom,
   FaFireExtinguisher,
-  FaDollarSign,
 } from "react-icons/fa"
 
 import {
@@ -174,46 +173,34 @@ function MapTest() {
   //장소 데이터 받아오기
   //클라우드
   // 물놀이시설 데이터 받아오기
-  const [wptype1, setWptype1] = useState([]);
-  useEffect(() => {
-    axios
-      .get('https://server.childcarrymap.click/map/wptypeids/1')
-      .then(json => {
-        // console.log(json.data[0].waterplayvalue01);
-        setWptype1(json.data); 
-      })
-  }, []);
-
-  //로컬
   // const [wptype1, setWptype1] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/wptypeids/1')
+  //     .get('https://server.childcarrymap.click/map/wptypeids/1')
   //     .then(json => {
   //       // console.log(json.data[0].waterplayvalue01);
-  //       setWptype1(json.data);
+  //       setWptype1(json.data); 
   //     })
   // }, []);
+
+  //로컬
+  const [wptype1, setWptype1] = useState([]);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/map/wptypeids/1')
+      .then(json => {
+        // console.log(json.data[0].waterplayvalue01);
+        setWptype1(json.data);
+      })
+  }, []);
 
 
   //수영장 데이터 받아오기
   //클라우드
-  const [wptype2, setWptype2] = useState([]);
-  useEffect(() => {
-    axios
-      .get('https://server.childcarrymap.click/map/wptypeids/2')
-      .then(json => {
-        // console.log(json.data);
-        // console.log(json.data[0].waterplayscorefacidesc);
-        setWptype2(json.data);
-      })
-  }, []);
-
-  //로컬
   // const [wptype2, setWptype2] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/wptypeids/2')
+  //     .get('https://server.childcarrymap.click/map/wptypeids/2')
   //     .then(json => {
   //       // console.log(json.data);
   //       // console.log(json.data[0].waterplayscorefacidesc);
@@ -221,74 +208,75 @@ function MapTest() {
   //     })
   // }, []);
 
-
-  //바닥분수 데이터 받아오기
-  //클라우드
-  const [wptype3, setWptype3] = useState([]);
+  //로컬
+  const [wptype2, setWptype2] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/wptypeids/3')
+      .get('http://localhost:8000/map/wptypeids/2')
       .then(json => {
         // console.log(json.data);
-        setWptype3(json.data);
+        // console.log(json.data[0].waterplayscorefacidesc);
+        setWptype2(json.data);
       })
   }, []);
 
-  //로컬
+
+  //바닥분수 데이터 받아오기
+  //클라우드
   // const [wptype3, setWptype3] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/wptypeids/3')
+  //     .get('https://server.childcarrymap.click/map/wptypeids/3')
   //     .then(json => {
   //       // console.log(json.data);
   //       setWptype3(json.data);
   //     })
   // }, []);
 
+  //로컬
+  const [wptype3, setWptype3] = useState([]);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/map/wptypeids/3')
+      .then(json => {
+        // console.log(json.data);
+        setWptype3(json.data);
+      })
+  }, []);
+
 
 
   //수유실 데이터 받아오기
   //클라우드
-  const [nurse, setNurse] = useState([]);
-  useEffect(() => {
-    axios
-      .get('https://server.childcarrymap.click/map/toilettypes/%EC%88%98%EC%9C%A0%EC%8B%A4/')
-      .then(json => {
-        // console.log(json.data);
-        setNurse(json.data);
-      })
-  }, []);
-
-  //로컬
   // const [nurse, setNurse] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/toilettypes/%EC%88%98%EC%9C%A0%EC%8B%A4/')
+  //     .get('https://server.childcarrymap.click/map/toilettypes/%EC%88%98%EC%9C%A0%EC%8B%A4/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setNurse(json.data);
   //     })
   // }, []);
 
+  //로컬
+  const [nurse, setNurse] = useState([]);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/map/toilettypes/%EC%88%98%EC%9C%A0%EC%8B%A4/')
+      .then(json => {
+        // console.log(json.data);
+        setNurse(json.data);
+      })
+  }, []);
+
 
 
   //화장실 데이터 받아오기
   //클라우드
-  const [toilet, setToilet] = useState([]);
-  useEffect(() => {
-    axios
-      .get('https://server.childcarrymap.click/map/toilettypes/%ED%99%94%EC%9E%A5%EC%8B%A4/')
-      .then(json => {
-        // console.log(json.data);
-        setToilet(json.data);
-      })
-  }, []);
-
-  //로컬
   // const [toilet, setToilet] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/toilettypes/%ED%99%94%EC%9E%A5%EC%8B%A4/')
+  //     .get('https://server.childcarrymap.click/map/toilettypes/%ED%99%94%EC%9E%A5%EC%8B%A4/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setToilet(json.data);
@@ -296,197 +284,209 @@ function MapTest() {
   // }, []);
 
 
-  //편의점 데이터 받아오기
-  //클라우드
-  const [conv, setConv] = useState([]);
+  //로컬
+  const [toilet, setToilet] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/convtypes/%ED%8E%B8%EC%9D%98%EC%A0%90/')
+      .get('http://localhost:8000/map/toilettypes/%ED%99%94%EC%9E%A5%EC%8B%A4/')
       .then(json => {
         // console.log(json.data);
-        setConv(json.data);
+        setToilet(json.data);
       })
   }, []);
 
-  //로컬
+
+  //편의점 데이터 받아오기
+  //클라우드
   // const [conv, setConv] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/convtypes/%ED%8E%B8%EC%9D%98%EC%A0%90/')
+  //     .get('https://server.childcarrymap.click/map/convtypes/%ED%8E%B8%EC%9D%98%EC%A0%90/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setConv(json.data);
   //     })
   // }, []);
 
-
-  //드러그 스토어 데이터 받아오기
-  //클라우드
-  const [store, setStore] = useState([]);
+  //로컬
+  const [conv, setConv] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/convtypes/%EB%93%9C%EB%9F%AC%EA%B7%B8%EC%8A%A4%ED%86%A0%EC%96%B4/')
+      .get('http://localhost:8000/map/convtypes/%ED%8E%B8%EC%9D%98%EC%A0%90/')
       .then(json => {
         // console.log(json.data);
-        setStore(json.data);
+        setConv(json.data);
       })
   }, []);
 
-  //로컬
+
+  //드러그 스토어 데이터 받아오기
+  //클라우드
   // const [store, setStore] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/convtypes/%EB%93%9C%EB%9F%AC%EA%B7%B8%EC%8A%A4%ED%86%A0%EC%96%B4/')
+  //     .get('https://server.childcarrymap.click/map/convtypes/%EB%93%9C%EB%9F%AC%EA%B7%B8%EC%8A%A4%ED%86%A0%EC%96%B4/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setStore(json.data);
   //     })
   // }, []);
 
-
-  //약국 데이터 받아오기
-  //클라우드
-  const [pill, setPill] = useState([]);
+  //로컬
+  const [store, setStore] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/meditypes/%EC%95%BD%EA%B5%AD/')
+      .get('http://localhost:8000/map/convtypes/%EB%93%9C%EB%9F%AC%EA%B7%B8%EC%8A%A4%ED%86%A0%EC%96%B4/')
       .then(json => {
         // console.log(json.data);
-        setPill(json.data);
+        setStore(json.data);
       })
   }, []);
 
-  //로컬
+
+  //약국 데이터 받아오기
+  //클라우드
   // const [pill, setPill] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/meditypes/%EC%95%BD%EA%B5%AD/')
+  //     .get('https://server.childcarrymap.click/map/meditypes/%EC%95%BD%EA%B5%AD/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setPill(json.data);
   //     })
   // }, []);
 
-
-  //병원 데이터 받아오기
-  //클라우드
-  const [hospital, setHospital] = useState([]);
+  //로컬
+  const [pill, setPill] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/meditypes/%EB%B3%91%EC%9B%90/')
+      .get('http://localhost:8000/map/meditypes/%EC%95%BD%EA%B5%AD/')
       .then(json => {
         // console.log(json.data);
-        setHospital(json.data);
+        setPill(json.data);
       })
   }, []);
 
-  //로컬
+
+  //병원 데이터 받아오기
+  //클라우드
   // const [hospital, setHospital] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/meditypes/%EB%B3%91%EC%9B%90/')
+  //     .get('https://server.childcarrymap.click/map/meditypes/%EB%B3%91%EC%9B%90/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setHospital(json.data);
   //     })
   // }, []);
 
+  //로컬
+  const [hospital, setHospital] = useState([]);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/map/meditypes/%EB%B3%91%EC%9B%90/')
+      .then(json => {
+        // console.log(json.data);
+        setHospital(json.data);
+      })
+  }, []);
+
 
 
   //경찰서 데이터 받아오기
   //클라우드
-  const [police, setPolice] = useState([]);
-  useEffect(() => {
-    axios
-      .get('https://server.childcarrymap.click/map/safe112alls/')
-      .then(json => {
-        // console.log(json.data);
-        setPolice(json.data);
-      })
-  }, []);
-
-  //로컬
   // const [police, setPolice] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/safe112alls/')
+  //     .get('https://server.childcarrymap.click/map/safe112alls/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setPolice(json.data);
   //     })
   // }, []);
 
-
-  //소방서 데이터 받아오기
-  //클라우드
-  const [fire, setFire] = useState([]);
+  //로컬
+  const [police, setPolice] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/safe119alls/')
+      .get('http://localhost:8000/map/safe112alls/')
       .then(json => {
         // console.log(json.data);
-        setFire(json.data);
+        setPolice(json.data);
       })
   }, []);
 
-  //로컬
+
+  //소방서 데이터 받아오기
+  //클라우드
   // const [fire, setFire] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/safe119alls/')
+  //     .get('https://server.childcarrymap.click/map/safe119alls/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setFire(json.data);
   //     })
   // }, []);
 
-
-  //민영 주차장 데이터 받아오기
-  //클라우드
-  const [park, setPark] = useState([]);
+  //로컬
+  const [fire, setFire] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/parkingtypes/%EB%AF%BC%EC%98%81/')
+      .get('http://localhost:8000/map/safe119alls/')
       .then(json => {
         // console.log(json.data);
-        setPark(json.data);
+        setFire(json.data);
       })
   }, []);
 
-  //로컬
+
+  //민영 주차장 데이터 받아오기
+  //클라우드
   // const [park, setPark] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/parkingtypes/%EB%AF%BC%EC%98%81/')
+  //     .get('https://server.childcarrymap.click/map/parkingtypes/%EB%AF%BC%EC%98%81/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setPark(json.data);
   //     })
   // }, []);
 
-
-  //공영 주차장 데이터 받아오기
-  //클라우드
-  const [free, setFree] = useState([]);
+  //로컬
+  const [park, setPark] = useState([]);
   useEffect(() => {
     axios
-      .get('https://server.childcarrymap.click/map/parkingtypes/%EA%B3%B5%EC%98%81/')
+      .get('http://localhost:8000/map/parkingtypes/%EB%AF%BC%EC%98%81/')
       .then(json => {
         // console.log(json.data);
-        setFree(json.data);
+        setPark(json.data);
       })
   }, []);
 
-  //로컬
+
+  //공영 주차장 데이터 받아오기
+  //클라우드
   // const [free, setFree] = useState([]);
   // useEffect(() => {
   //   axios
-  //     .get('http://localhost:8000/map/parkingtypes/%EA%B3%B5%EC%98%81/')
+  //     .get('https://server.childcarrymap.click/map/parkingtypes/%EA%B3%B5%EC%98%81/')
   //     .then(json => {
   //       // console.log(json.data);
   //       setFree(json.data);
   //     })
   // }, []);
+
+  //로컬
+  const [free, setFree] = useState([]);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/map/parkingtypes/%EA%B3%B5%EC%98%81/')
+      .then(json => {
+        // console.log(json.data);
+        setFree(json.data);
+      })
+  }, []);
 
   //물놀이 카테고리 만들기
   const markerImageSrc =
@@ -634,6 +634,7 @@ function MapTest() {
     //마우스오버 이벤트
     const [isMouseOver, setIsMouseOver] = useState(false);
 
+    const routeLink = "https://map.naver.com/v5/search/"+ title +"?c=15,0,0,0,dh"
     //그래프데이터
     const data = [
       {
@@ -745,7 +746,18 @@ function MapTest() {
                         <div>
                           <button onClick={() => setIsDetailClick(true)} style={{ fontSize: "12px", fontWeight: "bold", width: "90px", background: "#3170B9", color: "white", borderRadius: "10px", }}>상세페이지</button>
                           &nbsp;
-                          <button onClick={() => setIsDetailClick(true)} style={{ fontSize: "12px", fontWeight: "bold", width: "90px", background: "#3170B9", color: "white", borderRadius: "10px", }}>길찾기</button>
+                          <button onClick={() => setIsDetailClick(true)} 
+                            style={{ 
+                              fontSize: "12px", 
+                              fontWeight: "bold", 
+                              width: "90px", 
+                              background: "#3170B9", 
+                              color: "white", 
+                              borderRadius: "10px", 
+                              }}>
+                                <a href={routeLink} target="_blank">길찾기</a>
+                                
+                          </button>
                         </div>
                       </div>
 

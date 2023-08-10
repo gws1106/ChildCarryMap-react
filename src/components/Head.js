@@ -3,7 +3,6 @@ import logo from "../image/logo.png";
 
 function Head() {
 
-  //토글 메뉴 만들기
 
   return (
     <div className="header-container">

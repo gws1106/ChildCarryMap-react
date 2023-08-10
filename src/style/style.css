@@ -526,3 +526,16 @@ main{
   background: -webkit-linear-gradient(to right, #4498FF, #306CB5);
   background: linear-gradient(to right, #4498FF, #306CB5);
 }
+
+a:link {
+  color : white;
+}
+a:visited {
+  color : black;
+}
+a:hover {
+  color : red;
+}
+a:active {
+  color : green
+}
