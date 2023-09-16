@@ -1,5 +1,5 @@
 
-# Child Carry Map - 여름철 아이들 물놀이장 정보 제공 시스템
+# Child Carry Map - 여름철 아이들 물놀이장 정보 제공 시스템 (2023.06.29 ~ 2023.08.08)
 
 <img width="840" alt="main" src="https://github.com/liljw/ChildCarryMap/assets/129480514/559847e1-8506-478c-8dba-5b49cde8ece5">
 
