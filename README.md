@@ -174,7 +174,7 @@ https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view
 
 <img width="1680" alt="erd" src="https://github.com/liljw/ChildCarryMap/assets/129480514/9f87e416-ef0e-420e-ae00-7ae315743b46">
 ---
----
+
 
 # 데이터 분석
 
