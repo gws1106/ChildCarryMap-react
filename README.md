@@ -25,7 +25,12 @@
     - 주제 선정 배경
     - 타겟
     - 기대효과
-3. 기능
+3. 구현
+    - 클라우드
+        - 인프라 설계 구성도
+    - 웹
+        - 데이터베이스 ERD
+4. 기능
     - 데이터 분석
         - 편의지수 개발
             - 데이터 마트 구축
@@ -46,11 +51,7 @@
             - 감성분석 결과 예시
         - 리뷰 키워드 추출
             - 자연어처리 (워드클라우드)
-4. 구현
-    - 클라우드
-        - 인프라 설계 구성도
-    - 웹
-        - 데이터베이스 ERD
+
 5. 시연
     - 시연 영상
 6. 발전 가능성
@@ -161,7 +162,18 @@ https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view
 ### 기대효과
 
 <img width="1680" alt="expentance" src="https://github.com/liljw/ChildCarryMap/assets/129480514/54780fe3-26a8-4bbf-bb6b-9fa8673636bb">
+---
 
+# 클라우드
+
+### 인프라 설계 구성도
+
+<img width="1680" alt="cloud" src="https://github.com/liljw/ChildCarryMap/assets/129480514/639c583c-43c3-4437-9e0d-5145f2aa58a6">
+
+### 데이터베이스 ERD
+
+<img width="1680" alt="erd" src="https://github.com/liljw/ChildCarryMap/assets/129480514/9f87e416-ef0e-420e-ae00-7ae315743b46">
+---
 ---
 
 # 데이터 분석
@@ -236,19 +248,7 @@ https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view
 
 <img width="1680" alt="wordcloud" src="https://github.com/liljw/ChildCarryMap/assets/129480514/fb9cac57-f1fa-46bf-8c95-5b176fa7fcb8">
 
----
 
-# 클라우드
-
-### 인프라 설계 구성도
-
-<img width="1680" alt="cloud" src="https://github.com/liljw/ChildCarryMap/assets/129480514/639c583c-43c3-4437-9e0d-5145f2aa58a6">
-
-### 데이터베이스 ERD
-
-<img width="1680" alt="erd" src="https://github.com/liljw/ChildCarryMap/assets/129480514/9f87e416-ef0e-420e-ae00-7ae315743b46">
-
----
 
 ## 확장가능성
 
