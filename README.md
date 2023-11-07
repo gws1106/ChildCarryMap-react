@@ -43,7 +43,11 @@
         - 시각화
             - Folium
             - 랭킹
-            - 방사형차트 (스버로 데이터 요청할 수 있음
+            - 방사형차트 (스버로 데이터 요청할 수 있음)
+         
+
+
+
 - 백엔드는 2개의 가용영역을 두고 Private Subnet에 위치시켰고 Load Balancer를 연결, EC2에 Django app을 도커 이미지로 배포
 - DB는 Private에 위치시켜 Public 접근을 막음
 - 클라우드 운영자는 Bastion Host를 통해 Pirvate에 위치한 DB관리 
