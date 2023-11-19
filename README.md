@@ -60,7 +60,7 @@
 ## 프로젝트 결과
 
 결과 동영상 링크
-https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view
+[https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view](https://drive.google.com/file/d/1j-RdFm8MHyxdPkGOX514Bay9uHB1mi3B/view?usp=sharing)
 
 ### 메인페이지 (Home 화면)
 
